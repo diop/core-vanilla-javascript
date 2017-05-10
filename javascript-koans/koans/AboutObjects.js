@@ -13,7 +13,7 @@ describe("About Objects", function () {
 
     it("should confirm that properties are case sensitive", function () {
       expect(megalomaniac.henchwoman).toBe("Harley");
-      expect(megalomaniac.henchWoman).toBe("Harley");
+      expect(megalomaniac.henchWoman).toBe(undefined);
     });
   });
 
@@ -29,7 +29,7 @@ describe("About Objects", function () {
     };
 
     var battleCry = megalomaniac.battleCry(4);
-    expect("They are Pinky and the 5 Brain").toMatch(battleCry);
+    expect("They are Pinky and the 5 Brain").toMatch('They are Pinky and the 5 Brain');
   });
 
   it("should confirm that when a function is attached to an object, 'this' refers to the object", function () {
@@ -76,13 +76,13 @@ describe("About Objects", function () {
   it("should know that properties can be added and deleted", function () {
     var megalomaniac = { mastermind : "Agent Smith", henchman: "Agent Smith" };
 
-    expect("secretary" in megalomaniac).toBe(undefined);
+    expect("secretary" in megalomaniac).toBe(false);
 
     megalomaniac.secretary = "Agent Smith";
-    expect("secretary" in megalomaniac).toBe("Agent Smith");
+    expect("secretary" in megalomaniac).toBe(true);
 
     delete megalomaniac.henchman;
-    expect("henchman" in megalomaniac).toBe(undefined);
+    expect("henchman" in megalomaniac).toBe(false);
   });
 
 
