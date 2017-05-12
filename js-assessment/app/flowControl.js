@@ -10,16 +10,18 @@ exports.flowControlAnswers = {
     //
     // otherwise the function should return the number, or false if no number
     // was provided or the value provided is not a number
-      if ( num % 3 == 0 && num % 5 == 0 ) {
-        return "Fizz";
-      } else if ( num % 3 == 0 ) {
-        return "Buzz"
-      } else if  ( num % 5 == 0 ){
-        return "FizzBuzz";
-      } else if (!Number.isInteger(num)){
-        return false;
-      } else {
+      while ( num % 3 === 0 || num % 5 === 0 ) {
+        if ( num % 3 === 0 ){
+            return "fizz";
+        } else if  ( num % 5 === 0 ){
+            return "buzz";
+        } else if  ( num % 3 === 0 && num % 5 === 0 ){
+            return "fizzuzz";
+        } else if (!Number.isInteger(num)){
+            return false;
+        } else {
         return num;
+        }
+      }
     }
-  }
 };

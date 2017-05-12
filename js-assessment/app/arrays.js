@@ -75,11 +75,21 @@ exports.arraysAnswers = {
   },
 
   duplicates: function(arr) {
-     
+    var result = [];
+    var obj = {};
+    for (var i = 0; i < arr.length; i++){
+        obj[arr[i]] = 0;
+    }
+    for (i in obj) {
+        result.push(i);
+    }
+    return result;
   },
 
   square: function(arr) {
-
+      return arr.map(function (x) {
+          return Math.pow(x, 2);
+      });
   },
 
   findAllOccurrences: function(arr, target) {
