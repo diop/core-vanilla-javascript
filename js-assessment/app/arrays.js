@@ -67,11 +67,15 @@ exports.arraysAnswers = {
   },
 
   count: function(arr, item) {
-
+      var i, j, count = 0;
+      for (i = 0, j = arr.length; i < j; i++) {
+          (arr[i] === item) && count++;
+      }
+      return count;
   },
 
   duplicates: function(arr) {
-
+     
   },
 
   square: function(arr) {
