@@ -2,7 +2,9 @@
 
 // 1. Create a function that takes an array of positive and negative numbers. Return an array where the first element is the count of positive numbers and the second element is the sum of negative numbers.
 // https://edabit.com/challenge/xXJLZry3vYd4erPct
-
+function positiveNegative(){
+        
+}
 
 // 2. Create a function that accepts an array and returns the last item in the array. The array can contain any of JavaScript's five primitive data types.
 // https://edabit.com/challenge/7JBTN4TbaxJQMdX9W

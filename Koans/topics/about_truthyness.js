@@ -3,7 +3,7 @@ module("About Truthyness (topics/about_truthyness.js)");
 
 test("truthyness of positive numbers", function() {
     var oneIsTruthy = 1 ? true : false;
-    equal(__, oneIsTruthy, 'is one truthy?');
+    equal(true, oneIsTruthy, 'is one truthy?');
 });
 
 test("truthyness of negative numbers", function() {
